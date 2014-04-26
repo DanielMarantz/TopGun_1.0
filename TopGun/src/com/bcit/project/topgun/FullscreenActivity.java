@@ -121,7 +121,7 @@ public class FullscreenActivity extends Activity {
         // Trigger the initial hide() shortly after the activity has been
         // created, to briefly hint to the user that UI controls
         // are available.
-        delayedHide(100);
+        delayedHide(101);//CHANGED BY NAV FROM 100 TO 101
     }
 
 
