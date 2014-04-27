@@ -4,5 +4,9 @@
     <string name="app_name">TopGun</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="hello_world">Hello World</string>
+    <string name="button_1">Test 1</string>
+    <string name="button_2">Test 2</string>
+    <string name="button_3">Test 3</string>
 
 </resources>
