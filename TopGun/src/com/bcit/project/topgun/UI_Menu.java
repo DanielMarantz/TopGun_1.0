@@ -48,7 +48,7 @@ public class UI_Menu extends SimpleBaseGameActivity {
 	
 	private HUD hud;
 	private Sprite hudSprite;
-	private Camera camera = new Camera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);;
+	private Camera camera = new Camera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
 
 	// ===========================================================
 	// Constructors
@@ -103,7 +103,7 @@ public class UI_Menu extends SimpleBaseGameActivity {
 		final float playerX = (CAMERA_WIDTH - this.mPlayerTextureRegion.getWidth()) / 2;
 		final float playerY = CAMERA_HEIGHT - this.mPlayerTextureRegion.getHeight() - 5;
 		
-		/* Create two sprits and add it to the scene. */
+		/* Create two sprites and add it to the scene. */
 		final AnimatedSprite player = new AnimatedSprite(playerX, playerY, this.mPlayerTextureRegion, vertexBufferObjectManager);
 		player.setScaleCenterY(this.mPlayerTextureRegion.getHeight());
 		player.setScale(2);
@@ -113,19 +113,6 @@ public class UI_Menu extends SimpleBaseGameActivity {
 		enemy.setScaleCenterY(this.mEnemyTextureRegion.getHeight());
 		enemy.setScale(2);
 		enemy.animate(new long[]{200, 200, 200}, 3, 5, true);
-		
-		//Creating a vibrator
-		final Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-		
-		// Creating the sprite button
-		hudSprite = new Sprite(150, 250, this.hudImage, vertexBufferObjectManager)	{
-            @Override
-            public boolean onAreaTouched(final TouchEvent pAreaTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
-            	
-            	vib.vibrate(50);	
-                return true;
-            }       
-		};
 	
 		scene.attachChild(player);
 		scene.attachChild(enemy);
